@@ -1,0 +1,21 @@
+{
+    "connect.influx.url": "https://influx-37a16657-sunnyproject.a.aivencloud.com:26292",
+    "connect.influx.db": "defaultdb",
+    "connect.influx.username": "avnadmin",
+    "connect.influx.password": "AVNS_a7Tzmz-2PPbvzz_93WS",
+    "connect.influx.kcql": "insert into measurements select uuid, temperature, ts from topic4",
+    "name": "KafkaInfluxConnector",
+    "connector.class": "com.datamountaineer.streamreactor.connect.influx.InfluxSinkConnector",
+    "key.converter": "io.confluent.connect.avro.AvroConverter",
+    "key.converter.schema.registry.url": "https://mykafkaservice-sunnyproject.a.aivencloud.com:26297",
+    "key.converter.schemas.enable": "false",
+    "key.converter.basic.auth.credentials.source": "USER_INFO",
+    "key.converter.schema.registry.basic.auth.user.info": "avnadmin:AVNS_Im__2vnDWPyep_4CfID",
+    "value.converter": "io.confluent.connect.avro.AvroConverter",
+    "value.converter.schema.registry.url": "https://mykafkaservice-sunnyproject.a.aivencloud.com:26297",
+    "value.converter.schemas.enable": "false",
+    "value.converter.basic.auth.credentials.source": "USER_INFO",
+    "value.converter.schema.registry.basic.auth.user.info": "avnadmin:AVNS_Im__2vnDWPyep_4CfID",
+    "topics": "topic4"
+    
+}
